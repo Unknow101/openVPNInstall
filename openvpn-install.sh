@@ -783,6 +783,7 @@ ifconfig-pool-persist ipp.txt" >> /etc/openvpn/server.conf
 		fi
 		;;
 	esac
+	echo 'push "route 172.16.2.0 255.255.255.0"' >> /etc/openvpn/server.conf
 
 	# IPv6 network settings if needed
 	if [[ "$IPV6_SUPPORT" = 'y' ]]; then
